@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al Raiyan Mandi | Nagore's Royal Arabic Dining</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Poppins', sans-serif; background-color: #050505; color: #f3f4f6; overflow-x: hidden; }
+        .brand-font { font-family: 'MedievalSharp', cursive; }
+        .gold-gradient {
+            background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+        .nav-link { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #a8a29e; transition: 0.3s; position: relative; }
+        .nav-link::after { content: ''; position: absolute; width: 0; height: 1px; bottom: -5px; left: 0; background: #bf953f; transition: 0.3s; }
+        .nav-link:hover::after { width: 100%; }
+        .nav-link:hover { color: #bf953f; }
+
+        .glass-card {
+            background: rgba(20, 20, 20, 0.8);
+            border: 1px solid rgba(191, 149, 63, 0.1);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            width: 280px;
+            flex-shrink: 0;
+        }
+        
+        .glass-card:hover { 
+            border-color: rgba(191, 149, 63, 0.5); 
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+        }
+
+        .service-card {
+            background: rgba(15, 15, 15, 0.5);
+            border-left: 2px solid rgba(191, 149, 63, 0.2);
+            transition: all 0.4s ease;
+        }
+        .service-card:hover { border-left: 2px solid #bf953f; transform: translateX(10px); }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        .scroll-btn {
+            border: 1px solid rgba(191, 149, 63, 0.3);
+            width: 40px; height: 40px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            color: #bf953f; transition: 0.3s;
+        }
+        .scroll-btn:hover { background: #bf953f; color: black; }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed top-0 w-full z-50 px-4 md:px-10 py-6 flex justify-between items-center bg-black/95 backdrop-blur-md border-b border-white/5">
+        <h1 class="brand-font text-lg md:text-2xl gold-gradient uppercase tracking-wider">Al Raiyan Restaurant</h1>
+        
+        <div class="flex space-x-3 md:space-x-8 lg:space-x-12">
+            <a href="#home" class="nav-link text-[9px] md:text-[11px]">Home</a>
+            <a href="#menu" class="nav-link text-[9px] md:text-[11px]">Menu</a>
+            <a href="#services" class="nav-link text-[9px] md:text-[11px]">Services</a>
+            <a href="#reviews" class="nav-link text-[9px] md:text-[11px]">Reviews</a>
+            <a href="#contact" class="nav-link text-[9px] md:text-[11px]">Contact</a>
+        </div>
+    </nav>
+        <h1 class="brand-font text-xl md:text-2xl gold-gradient uppercase tracking-wider">Al Raiyan Restaurant</h1>
+        <div class="hidden md:flex space-x-8 lg:space-x-12">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#menu" class="nav-link">Menu</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#reviews" class="nav-link">Reviews</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <section id="home" class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=1600" class="absolute w-full h-full object-cover scale-110 animate-[pulse_10s_infinite]">
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="relative z-10 text-center px-4" data-aos="zoom-out" data-aos-duration="1500">
+            <h2 class="brand-font text-5xl md:text-8xl gold-gradient uppercase tracking-widest leading-tight">The Mandi King</h2>
+            <p class="text-stone-400 text-[10px] md:text-[12px] tracking-[0.8em] uppercase mt-6">Nagore's Royal Arabic Pride</p>
+        </div>
+    </section>
+
+    <section id="menu" class="py-32 bg-[#050505] overflow-hidden">
+        <div class="px-10 md:px-20 mb-12 flex justify-between items-end" data-aos="fade-right">
+            <div>
+                <h3 class="brand-font text-3xl gold-gradient uppercase tracking-widest">Signature Menu</h3>
+                <p class="text-stone-500 text-[9px] uppercase tracking-[0.5em] mt-2 italic">Scroll to explore our delicacies</p>
+            </div>
+            <div class="flex space-x-4">
+                <button onclick="document.getElementById('m-scroll').scrollBy({left: -320, behavior: 'smooth'})" class="scroll-btn">❮</button>
+                <button onclick="document.getElementById('m-scroll').scrollBy({left: 320, behavior: 'smooth'})" class="scroll-btn">❯</button>
+            </div>
+        </div>
+
+        <div id="m-scroll" class="flex overflow-x-auto space-x-6 px-10 md:px-20 no-scrollbar pb-10" data-aos="fade-up">
+            <div class="glass-card rounded-lg overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1633945274405-b6c8069047b0?w=600" class="w-full h-56 object-cover">
+                <div class="p-6"><h4 class="text-white text-sm uppercase tracking-widest">Fish Biriyani</h4><p class="text-yellow-600 mt-2 font-bold">₹200 / ₹950</p></div>
+            </div>
+            <div class="glass-card rounded-lg overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600" class="w-full h-56 object-cover">
+                <div class="p-6"><h4 class="text-white text-sm uppercase tracking-widest">Mutton Mandi</h4><p class="text-yellow-600 mt-2 font-bold">₹299 / ₹1499</p></div>
+            </div>
+            <div class="glass-card rounded-lg overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=600" class="w-full h-56 object-cover">
+                <div class="p-6"><h4 class="text-white text-sm uppercase tracking-widest">Alfaham Mandi</h4><p class="text-yellow-600 mt-2 font-bold">₹449 / ₹849</p></div>
+            </div>
+            <div class="glass-card rounded-lg overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=600" class="w-full h-56 object-cover">
+                <div class="p-6"><h4 class="text-white text-sm uppercase tracking-widest">Tandoori Mandi</h4><p class="text-yellow-600 mt-2 font-bold">₹450 / ₹849</p></div>
+            </div>
+            <div class="glass-card rounded-lg overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=600" class="w-full h-56 object-cover">
+                <div class="p-6"><h4 class="text-white text-sm uppercase tracking-widest">Chicken BBQ</h4><p class="text-yellow-600 mt-2 font-bold">₹119 / ₹439</p></div>
+            </div>
+            <div class="glass-card rounded-lg overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=600" class="w-full h-56 object-cover">
+                <div class="p-6"><h4 class="text-white text-sm uppercase tracking-widest">Fresh Mojitos</h4><p class="text-yellow-600 mt-2 font-bold">₹70</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-32 bg-[#080808] px-10 md:px-24">
+        <div class="text-center mb-20" data-aos="fade-up">
+            <h3 class="brand-font text-3xl md:text-4xl gold-gradient uppercase tracking-widest">Our Royal Services</h3>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div class="service-card p-10" data-aos="fade-up" data-aos-delay="100">
+                <h4 class="text-white text-lg uppercase tracking-widest mb-4 font-semibold">Traditional Majlis Dining</h4>
+                <p class="text-stone-400 text-sm italic">"Nagore-laye best family cabin experience with complete privacy."</p>
+            </div>
+            <div class="service-card p-10" data-aos="fade-up" data-aos-delay="200">
+                <h4 class="text-white text-lg uppercase tracking-widest mb-4 font-semibold">Unlimited Rice Service</h4>
+                <p class="text-stone-400 text-sm italic">"Tasty Mandi with unlimited rice for all our royal guests."</p>
+            </div>
+            <div class="service-card p-10" data-aos="fade-up" data-aos-delay="300">
+                <h4 class="text-white text-lg uppercase tracking-widest mb-4 font-semibold">Gourmet Event Catering</h4>
+                <p class="text-stone-400 text-sm">Bucket Mandi and Biriyani platters for weddings and house parties.</p>
+            </div>
+            <div class="service-card p-10" data-aos="fade-up" data-aos-delay="400">
+                <h4 class="text-white text-lg uppercase tracking-widest mb-4 font-semibold">Arabic Grill Special</h4>
+                <p class="text-stone-400 text-sm">Authentic charcoal-grilled Alfaham and BBQ varieties.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-32 bg-[#050505]">
+        <div class="px-10 md:px-20 mb-12 flex justify-between items-center" data-aos="fade-right">
+            <h3 class="brand-font text-2xl md:text-3xl gold-gradient uppercase tracking-widest">Guest Experiences</h3>
+            <div class="flex space-x-4">
+                <button onclick="document.getElementById('r-scroll').scrollBy({left: -400, behavior: 'smooth'})" class="scroll-btn">❮</button>
+                <button onclick="document.getElementById('r-scroll').scrollBy({left: 400, behavior: 'smooth'})" class="scroll-btn">❯</button>
+            </div>
+        </div>
+        <div id="r-scroll" class="flex overflow-x-auto space-x-8 px-10 md:px-20 no-scrollbar pb-10" data-aos="zoom-in">
+            <div class="flex-shrink-0 w-[300px] md:w-[450px] p-10 bg-stone-900/40 border border-white/5 rounded-2xl glass-card">
+                <div class="flex items-center space-x-4 mb-6"><div class="w-10 h-10 bg-yellow-600/20 rounded-full flex items-center justify-center text-yellow-500 font-bold italic">S</div><div><h5 class="text-white text-xs uppercase">Syed S.</h5><div class="text-yellow-500 text-[10px]">★★★★★</div></div></div>
+                <p class="text-stone-400 text-sm italic">"Tasty Mandi with unlimited rice. Service is too good and very attentive."</p>
+            </div>
+            <div class="flex-shrink-0 w-[300px] md:w-[450px] p-10 bg-stone-900/40 border border-white/5 rounded-2xl glass-card">
+                <div class="flex items-center space-x-4 mb-6"><div class="w-10 h-10 bg-yellow-600/20 rounded-full flex items-center justify-center text-yellow-500 font-bold italic">M</div><div><h5 class="text-white text-xs uppercase">Mohamed A.</h5><div class="text-yellow-500 text-[10px]">★★★★★</div></div></div>
+                <p class="text-stone-400 text-sm italic">"Perfect for family with private cabin. Excellent quality food in Nagore."</p>
+            </div>
+            <div class="flex-shrink-0 w-[300px] md:w-[450px] p-10 bg-stone-900/40 border border-white/5 rounded-2xl glass-card">
+                <div class="flex items-center space-x-4 mb-6"><div class="w-10 h-10 bg-yellow-600/20 rounded-full flex items-center justify-center text-yellow-500 font-bold italic">K</div><div><h5 class="text-white text-xs uppercase">Kavitha M.</h5><div class="text-yellow-500 text-[10px]">★★★★★</div></div></div>
+                <p class="text-stone-400 text-sm italic">"Best Mandi experience. Very neat and professional service."</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-32 bg-[#080808] text-center px-6" data-aos="fade-up">
+        <h3 class="brand-font text-3xl gold-gradient uppercase tracking-widest mb-10">Connect With Us</h3>
+        <div class="space-y-4 text-stone-400 text-sm tracking-[0.2em] uppercase">
+            <p>BSNL Office Main Road, Nagore - 611002</p>
+            <p class="text-white text-2xl font-light">90922 58584 | 85250 77057</p>
+        </div>
+        <div class="mt-16 flex flex-col md:flex-row justify-center gap-6">
+            <a href="https://wa.me/919092258584" class="inline-block border border-yellow-700/40 px-12 py-5 text-[10px] tracking-[0.5em] uppercase hover:bg-yellow-600 hover:text-black transition duration-500">Book via WhatsApp</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=AL+RAIYAN+MANDHI+RESTUARANT+NAGORE" target="_blank" class="inline-block border border-white/20 px-12 py-5 text-[10px] tracking-[0.5em] uppercase hover:bg-white hover:text-black transition duration-500">Open in Google Maps</a>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-[9px] tracking-[0.6em] text-stone-700 uppercase border-t border-white/5">
+        Al Raiyan Restaurant &copy; 2026. All Rights Reserved.
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true, offset: 100 });
+    </script>
+</body>
+</html>
